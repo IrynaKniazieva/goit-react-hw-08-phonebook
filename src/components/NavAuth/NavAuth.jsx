@@ -1,12 +1,12 @@
-import { NavLink } from "react-router-dom";
+import { Container, Link} from "./NavAuth.stuled";
 
 const NavAuth = () => {
 
   return (
-    <div>
-        <NavLink to="register">Register</NavLink>
-        <NavLink to="login">Login</NavLink>
-    </div>
+    <Container>
+        <Link to="register">Register</Link>
+        <Link to="login">Login</Link>
+    </Container>
   );
 
 };
