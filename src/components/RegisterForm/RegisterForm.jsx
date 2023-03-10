@@ -6,8 +6,16 @@ import { Form, Label } from "./RegisterForm.stuled";
 const RegisterForm = () => {
   const id = useMemo(() => nanoid(), []);
 
+  // const handleChange = e => {
+
+  // }
+
+  const handleSubmit = e => {
+    e.preventDefautt();
+  }
+
 return (
-    <Form >
+    <Form onSubmit={handleSubmit} >
     <Label htmlFor={id}>
       Name
       <input id={id} type="text" name="name" required label="User name" placeholder="User name"/>
