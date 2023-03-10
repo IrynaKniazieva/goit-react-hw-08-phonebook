@@ -1,22 +1,26 @@
+import Button from "components/Button/Button";
+import { nanoid } from "nanoid";
+import { useMemo } from "react";
 import { Form, Label } from "./RegisterForm.stuled";
 
 const RegisterForm = () => {
+  const id = useMemo(() => nanoid(), []);
 
 return (
     <Form >
-    <Label >
+    <Label htmlFor={id}>
       Name
-      <input type="text" name="name" />
+      <input id={id} type="text" name="name" required label="User name" placeholder="User name"/>
     </Label>
-    <Label >
+    <Label htmlFor={id}>
       Email
-      <input type="email" name="email" />
+      <input id={id} type="email" name="email" required label="User email" placeholder="User email"/>
     </Label>
-    <Label >
+    <Label htmlFor={id}>
       Password
-      <input type="password" name="password" />
+      <input id={id} type="password" name="password" required label="User password" placeholder="User password"/>
     </Label>
-    <button type="submit">Register</button>
+    <Button>Register</Button>
   </Form>
 )
 }
