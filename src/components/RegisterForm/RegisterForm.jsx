@@ -1,10 +1,6 @@
-// import useForm from "../../shared/hooks/useForm";
-// import TextField from "shared/TextField/TextField";
-// import initialState from "./initialState";
-
 import { Form, Label } from "./RegisterForm.stuled";
 
-const RegisterForm = ({onSubmit}) => {
+const RegisterForm = () => {
 
 return (
     <Form >
