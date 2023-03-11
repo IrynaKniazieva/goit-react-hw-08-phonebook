@@ -27,15 +27,15 @@ return (
    <Form onSubmit={handleSubmit}>
     <Label>
       Name
-      <input type="text" name="name" label="User name" placeholder="User name"/>
+      <input type="text" name="name"/>
     </Label>
     <Label >
       Email
-      <input  type="email" name="email" label="User email" placeholder="User email"/>
+      <input  type="email" name="email"/>
     </Label>
     <Label >
       Password
-      <input type="password" name="password" label="User password" placeholder="User password"/>
+      <input type="password" name="password"/>
     </Label>
     <Button>Register</Button>
   </Form>
