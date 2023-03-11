@@ -1,35 +1,37 @@
 import Button from "components/Button/Button";
 import { useDispatch } from "react-redux";
-import { signup } from "redux/auth/auth-operations";
+import { register } from "redux/auth/auth-operations";
 
 import { Form, Label } from "./RegisterForm.stuled";
 
-const RegisterForm = () => {
+export const RegisterForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = e => {
-    e.preventDefautt();
+    e.preventDefault();
+
     const form = e.currentTarget;
+
     dispatch(
-      signup({
+      register({
         name: form.elements.name.value,
         email: form.elements.email.value,
         password: form.elements.password.value,
       })
-    )
+    );
     form.reset();
-  }
+  };
 
 return (
   <div>
    <Form onSubmit={handleSubmit}>
-    <Label >
+    <Label>
       Name
       <input type="text" name="name" label="User name" placeholder="User name"/>
     </Label>
     <Label >
       Email
-      <input type="email" name="email" label="User email" placeholder="User email"/>
+      <input  type="email" name="email" label="User email" placeholder="User email"/>
     </Label>
     <Label >
       Password
@@ -42,4 +44,4 @@ return (
 )
 }
 
-export default RegisterForm;
+// export default RegisterForm;

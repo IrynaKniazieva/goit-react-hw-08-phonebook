@@ -1,9 +1,17 @@
 import axios from "axios";
 
 const authInstance = axios.create({
-    baseURL: "https://connections-api.herokuapp.com/"
-})
+    baseURL: "https://connections-api.herokuapp.com"
+}) 
 
-export const signup = (data) => {
-    return authInstance.post("users/signup", data);
+
+export const signup = credentials => {
+    return authInstance.post("users/signup", credentials);
+
 } 
+
+
+
+export const login = credentials => {
+    return authInstance.post("/users/login", credentials);
+}
