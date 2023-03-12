@@ -1,17 +1,17 @@
-import NavAuth from "components/NavAuth/NavAuth";
-import Navigation from "components/Navigation/Navigatiom";
+import {NavAuth} from "components/NavAuth/NavAuth";
+import {Navigation} from "components/Navigation/Navigatiom";
 import { UserMenu } from "components/UserMenu/UserMenu";
 import { Header } from "./AppBar.stuled";
-import { useAuth } from "shared/hooks";
+import { useAuth } from "hooks";
 
 
-const AppBar = () => {
-    const {isLoggedId} = useAuth();
+const AppBar = () => { 
+    const { isLoggedIn } = useAuth();
     
     return (
         <Header>
-            <Navigation/>
-            {isLoggedId ? <UserMenu/> : <NavAuth/>}
+            <Navigation />
+            {isLoggedIn ? <UserMenu /> : <NavAuth />}
         </Header>
 
     )

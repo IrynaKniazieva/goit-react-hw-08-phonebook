@@ -1,23 +1,37 @@
-import { nanoid } from "nanoid";
-import { useMemo } from "react";
+import { useDispatch } from "react-redux";
 
 import { Form, Label } from "./LoginForm.stuled";
 
 import Button from "../Button/Button"
+import { logIn } from "redux/auth/auth-operations";
 
 
 const LoginForm = () => {
-    const id = useMemo(() => nanoid(), []);
+  const dispatch = useDispatch();
+  const handleSubmit = e => {
+    e.preventDefault();
+    const form = e.currentTarget;
+
+    dispatch(
+      logIn({
+       
+        email: form.elements.email.value,
+        password: form.elements.password.value,
+      })
+    );
+    form.reset();
+  }
+    
 
 return (
-    <Form >
-    <Label htmlFor={id}>
+    <Form onSubmit={handleSubmit}>
+    <Label >
       Email
-      <input id={id} type="email" name="email" required label="User email" placeholder="User email" />
+      <input type="email" name="email" required label="User email" placeholder="User email" />
     </Label>
-    <Label htmlFor={id}>
+    <Label >
       Password
-      <input id={id} type="password" name="password" required label="User password" placeholder="User password"/>
+      <input type="password" name="password" required label="User password" placeholder="User password"/>
     </Label>
     <Button>Log in</Button>
   </Form>

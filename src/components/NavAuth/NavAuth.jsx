@@ -1,6 +1,6 @@
 import { Container, Link} from "./NavAuth.stuled";
 
-const NavAuth = () => {
+export const NavAuth = () => {
 
   return (
     <Container>
@@ -11,4 +11,3 @@ const NavAuth = () => {
 
 };
 
-export default NavAuth;

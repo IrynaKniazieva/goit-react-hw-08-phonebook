@@ -1,7 +1,7 @@
 import { Link } from "./Navigation.stuled"
-import { useAuth } from "shared/hooks";
+import { useAuth } from "hooks";
 
-const Navigation = () => {
+export const Navigation = () => {
     const { isLoggedIn } = useAuth();
 
 return (
@@ -12,4 +12,3 @@ return (
 )
 }
 
-export default Navigation;
