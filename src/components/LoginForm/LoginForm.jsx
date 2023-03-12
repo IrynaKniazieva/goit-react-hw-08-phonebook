@@ -33,7 +33,7 @@ return (
       Password
       <input type="password" name="password" required label="User password" placeholder="User password"/>
     </Label>
-    <Button>Log in</Button>
+    <Button type="submit">Log in</Button>
   </Form>
 )
 }

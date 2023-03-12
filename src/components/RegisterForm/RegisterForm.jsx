@@ -37,7 +37,7 @@ return (
       Password
       <input type="password" name="password"/>
     </Label>
-    <Button>Register</Button>
+    <Button type="submit">Register</Button>
   </Form>
   </div>
  

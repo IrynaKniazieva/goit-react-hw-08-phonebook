@@ -1,8 +1,8 @@
 import { ButtonStuled } from "./Button.stuled"
 
-const Button = ({children, type="submit"}) => {
+const Button = ({children}) => {
     return (
-        <ButtonStuled type={type}>{children}</ButtonStuled>
+        <ButtonStuled>{children}</ButtonStuled>
     )
 }
 
