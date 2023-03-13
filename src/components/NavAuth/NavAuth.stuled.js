@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export const Container = styled.div`
 display: flex;
-margin-left: 715px;
+margin-left: 700px;
 `;
 
 export const Link = styled(NavLink)`
@@ -15,6 +15,6 @@ export const Link = styled(NavLink)`
 
   &.active {
     color: white;
-    background-color: orangered;
+    background-color: #2F70AF;
   }
 `;

@@ -1,7 +1,7 @@
-// import Button from "components/Button/Button";
 import { useAuth } from "hooks";
 import { useDispatch } from "react-redux";
 import { logOut } from "redux/auth/auth-operations";
+import { ButtonUserMenu, Container } from "./UserMenu.stuled";
 
 
 export const UserMenu = () => {
@@ -12,9 +12,9 @@ export const UserMenu = () => {
     const handleLogOut = () => dispatch(logOut());
   
     return (
-      <div >
+      <Container>
         <p>{user.email}</p>
-        <button type="button" onClick={handleLogOut}>Logout</button>
-      </div>
+        <ButtonUserMenu type="button" onClick={handleLogOut}>Log Out</ButtonUserMenu>
+      </Container>
     );
   };

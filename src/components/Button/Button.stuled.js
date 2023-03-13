@@ -9,4 +9,4 @@ padding: 8px 16px;
 
   &:hover {
     color: white;
-    background-color: orangered;}`;
+    background-color: #2F70AF;}`;
