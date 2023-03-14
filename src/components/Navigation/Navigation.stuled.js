@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
-export const Conteiner = styled.div`
-display: flex;
-  gap: 30px;`
+// export const Conteiner = styled.div`
+// display: flex;
+//   gap: 30px;`
 
 export const Link = styled(NavLink)`
 

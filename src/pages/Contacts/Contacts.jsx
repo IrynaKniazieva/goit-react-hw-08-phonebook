@@ -8,7 +8,6 @@ import { Box, Container, Typography } from '@mui/material';
 
 import { fetchContacts } from '../../redux/contacts/contacts-operations';
 
-// import styles from './Contacts.module.css';
 import {
   selectContacts,
   selectLoading,
@@ -25,7 +24,7 @@ const Contacts = () => {
 
   return (
     <main>
-      <Container sx={{ marginTop: '40px', display: 'flex',}}>
+      <Container sx={{ marginTop: '40px', display: 'flex' }}>
         <Box>
           {/* <Typography variant="h4" gutterBottom>
             ADD CONTACT
@@ -33,7 +32,7 @@ const Contacts = () => {
           <ContactForm />
           <div>{isLoading && 'Request in progress...'}</div>
         </Box>
-        <Box>
+        <Box sx={{ marginLeft: '200px' }}>
           <Typography variant="h4" gutterBottom>
             YOUR CONTACTS
           </Typography>
@@ -47,13 +46,3 @@ const Contacts = () => {
 };
 
 export default Contacts;
-
-// <div className={styles.sectionContacts}>
-//   <h2 className={styles.title}>Add Contact</h2>
-//   <ContactForm />
-//   <div>{isLoading && 'Request in progress...'}</div>
-//   <h2 className={styles.title}>Your Contacts</h2>
-//   {contacts.length > 1 && <Filter />}
-//   {isLoading && 'Loading...'}
-//   <ContactList />
-// </div>

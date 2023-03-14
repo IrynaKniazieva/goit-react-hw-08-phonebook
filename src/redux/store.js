@@ -23,7 +23,7 @@ import {
 
 import storage from 'redux-persist/lib/storage';
 
-import contactsReducer from './contacts/contacts-slice';
+import {contactsReducer} from './contacts/contacts-slice';
 import { authReducer } from './auth/auth-slice';
 import filterReducer from './filter/filter-slice';
 

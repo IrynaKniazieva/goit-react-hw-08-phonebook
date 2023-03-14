@@ -8,7 +8,7 @@ import AppBar from 'components/AppBar/AppBar';
 export const Layout = () => {
   return (
     <Container>
-      <AppBar/>
+      <AppBar />
       <Suspense fallback={<div>Loading...</div>}>
         <Outlet />
       </Suspense>

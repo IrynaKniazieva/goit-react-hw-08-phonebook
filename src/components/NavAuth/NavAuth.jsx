@@ -1,15 +1,16 @@
-import {Container, Link} from "./NavAuth.stuled";
+import { Box, Button } from '@mui/material';
 
+import { Link } from './NavAuth.stuled';
 
 export const NavAuth = () => {
-
   return (
-    <Container>
+    <Box>
+      <Button>
         <Link to="register">Register</Link>
-        <Link to="login">Log In</Link>
-    </Container>
+      </Button>
+      <Button>
+        <Link to="login">log In</Link>
+      </Button>
+    </Box>
   );
-
 };
-
- 
