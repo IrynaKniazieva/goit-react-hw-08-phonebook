@@ -5,10 +5,9 @@ const Register = () => {
 
 
   return (
-    <main style={{ textAlign: 'center' }}>
-      <p>Register</p>
+    // <main style={{ textAlign: 'center' }}>
+    <main>
       <RegisterForm/>
-      
     </main>
   );
 

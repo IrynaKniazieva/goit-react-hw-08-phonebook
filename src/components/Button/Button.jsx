@@ -4,6 +4,5 @@ const Button = ({children}) => {
     return (
         <ButtonStuled>{children}</ButtonStuled>
     )
-}
-
+    }
 export default Button;

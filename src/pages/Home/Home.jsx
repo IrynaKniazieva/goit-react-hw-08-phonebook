@@ -2,7 +2,8 @@ const Home = () => {
 
     return (
       <main style={{ textAlign: 'center' }}>
-        <p>Home</p>
+        <h1>REGISTER AND CREATE YOUR CONTACT BOOK</h1>
+        
       </main>
     );
   
