@@ -33,10 +33,10 @@ const Contacts = () => {
 
   return (
     <div className={styles.sectionContacts}>
-      <h1 className={styles.title}>Phonebook</h1>
+      <h2 className={styles.title}>Add Contact</h2>
       <ContactForm />
       <div>{isLoading && 'Request in progress...'}</div>
-      <h2 className={styles.title}>Contacts</h2>
+      <h2 className={styles.title}>Your Contacts</h2>
       {contacts.length > 1 && <Filter />}
       {isLoading && 'Loading...'}
       <ContactList />
