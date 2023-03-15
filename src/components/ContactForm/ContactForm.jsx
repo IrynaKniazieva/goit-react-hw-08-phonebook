@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Box, Button, Container, TextField, Typography } from '@mui/material';
 // import styles from './ContactForm.module.css';
+import { Notify } from 'notiflix';
 
 import { fetchAddContact } from 'redux/contacts/contacts-operations';
 
@@ -44,7 +45,7 @@ const ContactForm = () => {
     );
 
     checkContact
-      ? alert(`${name} is already in contacts`)
+      ? Notify.warning(`${name} is already in contacts`)
       : dispatch(fetchAddContact(contact)) && reset();
   };
 

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
-
+import { Notify } from 'notiflix';
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
 
 // Utility to add JWT
@@ -26,6 +26,7 @@ export const register = createAsyncThunk(
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
+      Notify.warning('Something wrong! Please try again!')
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -44,6 +45,7 @@ export const logIn = createAsyncThunk(
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
+      Notify.failure('Invalid login or password! Please try again!');
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -59,6 +61,7 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
     // After a successful logout, remove the token from the HTTP header
     clearAuthHeader();
   } catch (error) {
+    Notify.info('Something wrong! Please try again!');
     return thunkAPI.rejectWithValue(error.message);
   }
 });
@@ -82,6 +85,7 @@ export const refreshUser = createAsyncThunk(
       const response = await axios.get('/users/current');
       return response.data;
     } catch (error) {
+      Notify.info('Something wrong! Please try again!');
       return thunkAPI.rejectWithValue(error.message);
     }
   }
